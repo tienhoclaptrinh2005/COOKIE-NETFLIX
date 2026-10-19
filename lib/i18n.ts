@@ -198,6 +198,31 @@ const en = {
   overviewRedisMode: "REDIS MODE",
   overviewControlLink: "CONTROL LINK",
   overviewSessionVerified: "Protected session verified",
+  overviewTrafficEyebrow: "PUBLIC TRAFFIC // PRIVACY-SAFE",
+  overviewTrafficTitle: "Visitor Analytics",
+  overviewTrafficDescription:
+    "Page views and anonymous browser estimates for public pages. Administrator and known bot traffic is excluded.",
+  overviewTrafficTodayViews: "Page views today",
+  overviewTrafficTodayViewsDetail: "Loads and client-side page changes since 00:00 ICT",
+  overviewTrafficTodayVisitors: "Estimated visitors today",
+  overviewTrafficTodayVisitorsDetail: "Unique anonymous browser cookies; not a person count",
+  overviewTrafficActive: "Active in 5 minutes",
+  overviewTrafficActiveDetail: "Browsers that loaded a tracked page in the last 5 minutes",
+  overviewTrafficTotal: "Total page views",
+  overviewTrafficTotalDetail: "Recorded since visitor analytics was enabled",
+  overviewTrafficTrend: "7-Day Traffic",
+  overviewTrafficTrendDetail: "Daily page views and estimated browsers",
+  overviewTrafficDay: "Day",
+  overviewTrafficPageViews: "Page-view volume",
+  overviewTrafficCount: "Views",
+  overviewTrafficVisitorsShort: "Visitors",
+  overviewTrafficTopPages: "Top Public Pages",
+  overviewTrafficTopPagesDetail: "Page views over the last 7 days",
+  overviewTrafficHomePage: "Manual check",
+  overviewTrafficReceivePage: "Receive token",
+  overviewTrafficLoginPage: "Admin login",
+  overviewTrafficPrivacy:
+    "No raw IP address, cookie input or account token is stored. Anonymous IDs and IP rate-limit keys are one-way hashed.",
   settingsTitle: "SYSTEM SETTINGS",
   settingsDescription:
     "Tune Redis receipt limits while keeping manual checks unlimited and administrators exempt.",
@@ -287,6 +312,8 @@ const en = {
     "Redis receipt usage for one guest IP; the field expires after the daily reset.",
   redisLoginDetail:
     "Failed login count; expires after 15 minutes and is deleted after a successful login.",
+  redisTrafficDetail:
+    "Anonymous page-view counters, daily browser estimates, short-lived deduplication and activity fields.",
   redisWarning:
     "The root keys NetflixId and VN cannot be bulk-deleted here. The dispenser may consume individual verified or invalid members; application counters live in pixel_press.",
   redisConfirm:
@@ -550,6 +577,31 @@ const vi: Dictionary = {
   overviewRedisMode: "CHẾ ĐỘ REDIS",
   overviewControlLink: "KẾT NỐI QUẢN TRỊ",
   overviewSessionVerified: "Phiên bảo vệ đã được xác minh",
+  overviewTrafficEyebrow: "TRUY CẬP CÔNG KHAI // BẢO VỆ RIÊNG TƯ",
+  overviewTrafficTitle: "Thống kê lượt truy cập",
+  overviewTrafficDescription:
+    "Lượt xem trang và số trình duyệt ước tính trên các trang công khai. Không tính quản trị viên và bot đã nhận diện.",
+  overviewTrafficTodayViews: "Lượt xem hôm nay",
+  overviewTrafficTodayViewsDetail: "Lượt tải và chuyển trang kể từ 00:00 giờ Việt Nam",
+  overviewTrafficTodayVisitors: "Khách ước tính hôm nay",
+  overviewTrafficTodayVisitorsDetail: "Dựa trên cookie trình duyệt ẩn danh, không phải số người tuyệt đối",
+  overviewTrafficActive: "Hoạt động trong 5 phút",
+  overviewTrafficActiveDetail: "Trình duyệt đã tải trang được theo dõi trong 5 phút gần nhất",
+  overviewTrafficTotal: "Tổng lượt xem trang",
+  overviewTrafficTotalDetail: "Được ghi nhận từ lúc bật thống kê truy cập",
+  overviewTrafficTrend: "Truy cập 7 ngày",
+  overviewTrafficTrendDetail: "Lượt xem và trình duyệt ước tính theo ngày",
+  overviewTrafficDay: "Ngày",
+  overviewTrafficPageViews: "Mức lượt xem",
+  overviewTrafficCount: "Lượt",
+  overviewTrafficVisitorsShort: "Khách",
+  overviewTrafficTopPages: "Trang công khai nổi bật",
+  overviewTrafficTopPagesDetail: "Lượt xem trong 7 ngày gần nhất",
+  overviewTrafficHomePage: "Check thủ công",
+  overviewTrafficReceivePage: "Nhận token",
+  overviewTrafficLoginPage: "Đăng nhập quản trị",
+  overviewTrafficPrivacy:
+    "Không lưu IP gốc, cookie nhập vào hay token tài khoản. ID ẩn danh và khóa giới hạn IP đều được băm một chiều.",
   settingsTitle: "CÀI ĐẶT HỆ THỐNG",
   settingsDescription:
     "Điều chỉnh lượt nhận Redis; check thủ công luôn không giới hạn và quản trị viên được miễn hạn mức khách.",
@@ -638,6 +690,8 @@ const vi: Dictionary = {
     "Số lượt nhận Redis một IP khách đã dùng; field tự hết hạn sau khi sang ngày mới.",
   redisLoginDetail:
     "Số lần đăng nhập sai; tự hết hạn sau 15 phút và bị xóa khi đăng nhập đúng.",
+  redisTrafficDetail:
+    "Bộ đếm lượt xem ẩn danh, trình duyệt ước tính theo ngày, field chống ghi trùng và hoạt động ngắn hạn.",
   redisWarning:
     "Hai key gốc NetflixId và VN không thể bị xóa hàng loạt tại đây. Máy phát có thể tiêu thụ từng phần tử đã cấp hoặc không hợp lệ; bộ đếm ứng dụng nằm trong pixel_press.",
   redisConfirm:

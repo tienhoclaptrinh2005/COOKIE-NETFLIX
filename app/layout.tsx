@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { I18nProvider } from "@/components/i18n-provider";
 import { SiteAnnouncement } from "@/components/site-announcement";
+import { VisitTracker } from "@/components/visit-tracker";
 import { getAnnouncementConfig } from "@/lib/announcement";
 import { getAdminSession } from "@/lib/auth";
 import { getDictionary } from "@/lib/i18n";
@@ -38,6 +39,7 @@ export default async function RootLayout({
             {copy.skipToMain}
           </a>
           {children}
+          {!session && <VisitTracker />}
           {announcement?.enabled && <SiteAnnouncement config={announcement} />}
         </I18nProvider>
       </body>

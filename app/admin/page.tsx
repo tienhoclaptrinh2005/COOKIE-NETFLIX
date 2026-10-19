@@ -1,9 +1,11 @@
 import { Activity, CircleHelp, Database, Gauge, HeartPulse, InfinityIcon, Radio, ShieldCheck, Skull, UsersRound, Zap } from "lucide-react";
 import { AdminHeader } from "@/components/admin-header";
 import { AdminStatCard } from "@/components/admin-stat-card";
+import { TrafficOverview } from "@/components/traffic-overview";
 import { PixelPanel } from "@/components/ui/pixel-panel";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { getSystemStats } from "@/lib/system";
+import { getTrafficStats } from "@/lib/traffic";
 import { formatMessage } from "@/lib/i18n";
 import { getServerDictionary } from "@/lib/i18n-server";
 
@@ -12,7 +14,7 @@ export const metadata = { title: "Control Center" };
 
 export default async function AdminPage() {
   const copy = await getServerDictionary();
-  const stats = await getSystemStats();
+  const [stats, traffic] = await Promise.all([getSystemStats(), getTrafficStats()]);
   const resultTotal = Math.max(1, stats.live + stats.die + stats.unknown);
   const resultRows = [
     { label: "LIVE", value: stats.live, color: "bg-primary", text: "text-primary", icon: ShieldCheck },
@@ -29,6 +31,8 @@ export default async function AdminPage() {
           <AdminStatCard label={copy.overviewActiveQuota} value={stats.activeQuotaKeys} detail={copy.overviewCurrentWindow} icon={UsersRound} tone="violet" />
           <AdminStatCard label={copy.overviewAdminQuota} value="∞" detail={copy.overviewExempt} icon={InfinityIcon} tone="green" />
         </div>
+
+        <TrafficOverview stats={traffic} copy={copy} />
 
         <div className="grid gap-6 xl:grid-cols-[1.25fr_.75fr]">
           <PixelPanel title={copy.overviewDistribution} eyebrow={copy.overviewOutcomes} accent="blue">

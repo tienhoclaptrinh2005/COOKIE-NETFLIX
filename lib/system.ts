@@ -32,6 +32,7 @@ export async function getRedisOverview() {
     { pattern: `${APP_DATA_KEY} → han_muc_nhan:*`, fieldPattern: "han_muc_nhan:*", scope: "field" as const },
     { pattern: `${APP_DATA_KEY} → nhan:*`, fieldPattern: "nhan:*", scope: "field" as const },
     { pattern: `${APP_DATA_KEY} → dang_nhap:*`, fieldPattern: "dang_nhap:*", scope: "field" as const },
+    { pattern: `${APP_DATA_KEY} → truy_cap:*`, fieldPattern: "truy_cap:*", scope: "field" as const },
   ];
   const entries = await Promise.all(definitions.map(async (entry) => ({
     pattern: entry.pattern,

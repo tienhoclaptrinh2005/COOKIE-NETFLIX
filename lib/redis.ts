@@ -52,6 +52,21 @@ export async function appSet(field: string, value: string | number, ttlSeconds?:
   return 1;
 }
 
+export async function appSetIfAbsent(field: string, value: string | number, ttlSeconds?: number) {
+  if (redis) {
+    const created = await redis.hsetnx(APP_DATA_KEY, field, value);
+    if (created === 1 && ttlSeconds) await redis.hexpire(APP_DATA_KEY, field, ttlSeconds);
+    return created === 1;
+  }
+  cleanMemoryField(field);
+  if (memory.has(field)) return false;
+  memory.set(field, {
+    value: JSON.stringify(value),
+    expiresAt: ttlSeconds ? Date.now() + ttlSeconds * 1000 : undefined,
+  });
+  return true;
+}
+
 export async function appIncr(field: string, ttlSeconds?: number) {
   if (redis) {
     const value = await redis.hincrby(APP_DATA_KEY, field, 1);
