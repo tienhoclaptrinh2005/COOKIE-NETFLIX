@@ -203,11 +203,14 @@ const en = {
   overviewTrafficDescription:
     "Page views and anonymous browser estimates for public pages. Administrator and known bot traffic is excluded.",
   overviewTrafficTodayViews: "Page views today",
-  overviewTrafficTodayViewsDetail: "Loads and client-side page changes since 00:00 ICT",
+  overviewTrafficTodayViewsDetail:
+    "Loads and client-side page changes since 00:00 ICT",
   overviewTrafficTodayVisitors: "Estimated visitors today",
-  overviewTrafficTodayVisitorsDetail: "Unique anonymous browser cookies; not a person count",
+  overviewTrafficTodayVisitorsDetail:
+    "Unique anonymous browser cookies; not a person count",
   overviewTrafficActive: "Active in 5 minutes",
-  overviewTrafficActiveDetail: "Browsers that loaded a tracked page in the last 5 minutes",
+  overviewTrafficActiveDetail:
+    "Browsers that loaded a tracked page in the last 5 minutes",
   overviewTrafficTotal: "Total page views",
   overviewTrafficTotalDetail: "Recorded since visitor analytics was enabled",
   overviewTrafficTrend: "7-Day Traffic",
@@ -391,8 +394,8 @@ const vi: Dictionary = {
   brandTagline: "CHECK COOKIE NETFLIX",
   systemOnline: "HỆ THỐNG ONLINE",
   admin: "Quản trị",
-  navManualCheck: "Check thủ công",
-  navReceiveToken: "Nhận token",
+  navManualCheck: "Check Cookie ",
+  navReceiveToken: "Nhận Cookie",
   publicNavAria: "Công cụ công khai",
   announcementEyebrow: "BẢN TIN ARCADE // THÔNG BÁO",
   announcementClose: "Đóng thông báo",
@@ -582,11 +585,14 @@ const vi: Dictionary = {
   overviewTrafficDescription:
     "Lượt xem trang và số trình duyệt ước tính trên các trang công khai. Không tính quản trị viên và bot đã nhận diện.",
   overviewTrafficTodayViews: "Lượt xem hôm nay",
-  overviewTrafficTodayViewsDetail: "Lượt tải và chuyển trang kể từ 00:00 giờ Việt Nam",
+  overviewTrafficTodayViewsDetail:
+    "Lượt tải và chuyển trang kể từ 00:00 giờ Việt Nam",
   overviewTrafficTodayVisitors: "Khách ước tính hôm nay",
-  overviewTrafficTodayVisitorsDetail: "Dựa trên cookie trình duyệt ẩn danh, không phải số người tuyệt đối",
+  overviewTrafficTodayVisitorsDetail:
+    "Dựa trên cookie trình duyệt ẩn danh, không phải số người tuyệt đối",
   overviewTrafficActive: "Hoạt động trong 5 phút",
-  overviewTrafficActiveDetail: "Trình duyệt đã tải trang được theo dõi trong 5 phút gần nhất",
+  overviewTrafficActiveDetail:
+    "Trình duyệt đã tải trang được theo dõi trong 5 phút gần nhất",
   overviewTrafficTotal: "Tổng lượt xem trang",
   overviewTrafficTotalDetail: "Được ghi nhận từ lúc bật thống kê truy cập",
   overviewTrafficTrend: "Truy cập 7 ngày",
